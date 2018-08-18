@@ -1,0 +1,22 @@
+[package]
+name = "nx"
+version = "0.3.0"
+authors = ["Peter Atashian <retep998@gmail.com>"]
+description = "A high performance Rust library used to read NX files with minimal memory usage."
+documentation = "https://docs.rs/nx/"
+repository = "https://github.com/NoLifeDev/nx-rs"
+readme = "README.md"
+keywords = ["nx"]
+categories = ["parser-implementations"]
+license = "MIT"
+build = "build.rs"
+include = ["/src/**", "build.rs", "Cargo.toml", "LICENSE.md", "README.md"]
+
+[dependencies]
+memmap = "0.6"
+
+[build-dependencies]
+cc = "1.0"
+
+[dev-dependencies]
+image = { version = "0.18", features = ["png_codec"], default-features = false }
